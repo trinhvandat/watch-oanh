@@ -1,0 +1,107 @@
+
+entity Seller {
+
+}
+
+entity Customer {
+
+}
+
+relationship OneToOne {
+	Seller{user} to User
+    Customer{user} to User
+}
+
+entity Category {
+  name String,
+  description TextBlob
+}
+
+entity Product {
+  name String,
+  description TextBlob,
+  price BigDecimal,
+  image String,
+  inventory Integer,
+  sold Integer
+}
+
+relationship ManyToOne {
+	Product{category} to Category
+}
+
+entity Cart {
+}
+
+relationship OneToOne {
+	Cart{customer} to Customer
+}
+
+entity CartItem {
+}
+
+relationship ManyToOne {
+	CartItem{cart} to Cart
+}
+
+relationship OneToOne {
+	CartItem{product} to Product
+}
+
+entity Order {
+  orderDate LocalDate
+  receiverAddress String
+}
+
+relationship OneToOne {
+	Order{customer} to Customer
+}
+
+relationship OneToMany {
+	Order{product} to Product
+}
+
+entity Invoice {
+	invoiceDate LocalDate
+    total Double
+}
+
+relationship OneToOne {
+	Invoice{order} to Order
+}
+
+entity PaymentTransaction {
+	bankId String
+    amount Double
+}
+
+relationship OneToOne {
+	PaymentTransaction{order} to Order
+}
+
+relationship OneToMany {
+	PaymentTransaction{customer} to Customer
+}
+
+entity Review {
+	comment String
+    rate Integer
+    reviewDate LocalDate
+}
+
+relationship OneToMany {
+	Product{review} to Review
+}
+
+relationship OneToOne {
+	Review{customer} to Customer
+}
+
+
+
+
+
+
+// Set pagination options
+//paginate JobHistory, Employee with infinite-scroll
+//paginate Job with pagination
