@@ -1,0 +1,14 @@
+{
+  "applications": "*",
+  "changelogDate": "20231125124656",
+  "entityTableName": "customer",
+  "fields": [
+    {
+      "fieldName": "userId",
+      "fieldType": "Long"
+    }
+  ],
+  "name": "Customer",
+  "relationships": [],
+  "searchEngine": "no"
+}

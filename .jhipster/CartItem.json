@@ -1,0 +1,22 @@
+{
+  "applications": "*",
+  "changelogDate": "20231125125056",
+  "entityTableName": "cart_item",
+  "fields": [],
+  "name": "CartItem",
+  "relationships": [
+    {
+      "otherEntityName": "product",
+      "relationshipName": "product",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "cart",
+      "relationshipName": "cart",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

@@ -1,0 +1,29 @@
+{
+  "applications": "*",
+  "changelogDate": "20231125125456",
+  "entityTableName": "review",
+  "fields": [
+    {
+      "fieldName": "comment",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rate",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "reviewDate",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "name": "Review",
+  "relationships": [
+    {
+      "otherEntityName": "customer",
+      "relationshipName": "customer",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

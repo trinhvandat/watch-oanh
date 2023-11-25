@@ -1,16 +1,14 @@
 
-entity Seller {
 
+entity Seller {
+    userId Long
 }
 
 entity Customer {
-
+    userId Long
 }
 
-relationship OneToOne {
-	Seller{user} to User
-    Customer{user} to User
-}
+
 
 entity Category {
   name String,

@@ -1,0 +1,31 @@
+{
+  "applications": "*",
+  "changelogDate": "20231125125356",
+  "entityTableName": "payment_transaction",
+  "fields": [
+    {
+      "fieldName": "bankId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "amount",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "PaymentTransaction",
+  "relationships": [
+    {
+      "otherEntityName": "order",
+      "relationshipName": "order",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "customer",
+      "relationshipName": "customer",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}
